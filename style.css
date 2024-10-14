@@ -44,8 +44,8 @@ nav a:hover {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* عرض المنتجات بعمودين */
-    gap: 20px;
-    padding: 20px;
+    gap: 25px;
+    padding: 100px;
 }
 
 .product {

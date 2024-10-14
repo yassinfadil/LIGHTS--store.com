@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إرسال السيرة الذاتية عبر WhatsApp</title>
+    <link rel="stylesheet" href="style1.css"> <!-- ربط ملف CSS -->
+</head>
+<body>
+
+<div class="cv-container">
+    <h1>أرسال المعلومات من أجل الطلب</h1>
+    <form id="cvForm">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+
+        <label for="address">العنوان:</label>
+        <input type="text" id="address" name="address" placeholder="أدخل عنوانك" required>
+
+        <label for="product-number">رقم المنتج:</label>
+<input type="text" id="product-number" name="product-number" placeholder="أدخل رقم المنتج" required>
+
+
+        <a href="https://wa.me/+2120705244286" class="buy-btn" >      أرسال    الطلب    </a>
+    </form>
+</div>
+
+<script>
+    document.getElementById('cvForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // جمع البيانات من الحقول
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var address = document.getElementById('address').value;
+        var email = document.getElementById('email').value;
+        var skills = document.getElementById('skills').value;
+
+        // تنسيق الرسالة
+        var message = 'الاسم الكامل: ' + name + '%0A' +
+                      'رقم الهاتف: ' + phone + '%0A' +
+                      'العنوان: ' + address + '%0A' +
+                      'البريد الإلكتروني: ' + email + '%0A' +
+                      'المهارات: ' + skills;
+
+        // الرقم الذي ستتم مراسلته على الواتساب (تأكد من كتابة الرقم الدولي بشكل صحيح)
+        var whatsappNumber = '+2120642751782';
+
+        // تحويل البيانات إلى رابط WhatsApp
+        var whatsappURL = 'https://wa.me/+2120705244286' + whatsappNumber + 'مرحبا بكم في LIGHT store' + message;
+
+        // فتح الرابط لإرسال الرسالة
+        window.open(whatsappURL, 'https://wa.me/+2120705244286');
+    });
+</script>
+
+</body>
+</html>
